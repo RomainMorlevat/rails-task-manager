@@ -1,0 +1,7 @@
+<p>
+  <%= @task.done ? "[X]" : "[ ]" %><%= @task.name  %>
+</p>
+<%= link_to "/home", tasks_path %>
+<%= link_to "Mark as done", task_path(task: { done: true}), method: :patch %>
+<%= link_to "Edit task", task_edit_path %>
+<%= link_to "Delete task", task_path, method: :delete, data: { confirm: 'Confirm delete ?' } %>

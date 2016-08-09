@@ -1,0 +1,7 @@
+<ul>
+  <% @tasks.each do |t| %>
+  <li><%= t.done ? "[X]" : "[ ]" %> - <%= link_to t.name, task_path(t) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", new_task_path, class: "btn btn-primary"  %>
